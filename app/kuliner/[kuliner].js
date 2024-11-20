@@ -62,7 +62,7 @@ const DATA = [
   },
   {
     id: "7",
-    category_id: "1",
+    category_id: "4",
     title: "Chai Kue",
     poster:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoMjDWnURcsKpV5KWPUmPFuKphVJWxNzZSxg&s",
@@ -143,7 +143,7 @@ const DATA = [
   },
   {
     id: "16",
-    category_id: "1",
+    category_id: "8",
     title: "Kolo (Nasi Bambu)",
     poster:
       "https://cdngnfi2.sgp1.cdn.digitaloceanspaces.com/gnfi/uploads/images/2022/11/1916122022-kolo-nasi-bakar-bambu.png",
@@ -152,7 +152,7 @@ const DATA = [
   },
   {
     id: "17",
-    category_id: "1",
+    category_id: "8",
     title: "Kermanaci",
     poster:
       "https://cdngnfi2.sgp1.cdn.digitaloceanspaces.com/gnfi/uploads/images/2022/11/1916142022-18973356115_b6554dca14_c.jpg",

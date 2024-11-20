@@ -19,43 +19,50 @@ const DATA = [
     id: "1",
     category_id: "1",
     title: "Soto Kudus",
-    poster: "https://www.masakapahariini.com/wp-content/uploads/2020/02/soto-kudus-7.jpg",
+    poster:
+      "https://www.masakapahariini.com/wp-content/uploads/2020/02/soto-kudus-7.jpg",
   },
   {
     id: "2",
     category_id: "1",
     title: "Pecel",
-    poster: "https://assets-a1.kompasiana.com/items/album/2021/06/22/pecel-60d169f437f4b95a326098e2.jpg",
+    poster:
+      "https://assets-a1.kompasiana.com/items/album/2021/06/22/pecel-60d169f437f4b95a326098e2.jpg",
   },
   {
     id: "3",
     category_id: "2",
     title: "Sate Padang",
-    poster: "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTFZu_MnKgzm0u2uyBws9OwoIpE1UWorXq2sJtf3FJwffmEMhFU",
+    poster:
+      "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTFZu_MnKgzm0u2uyBws9OwoIpE1UWorXq2sJtf3FJwffmEMhFU",
   },
   {
     id: "4",
     category_id: "7",
     title: "Papeda",
-    poster: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Papeda%2C_Kuah_Kuning%2C_Ikan_Tude_Bakar_2.jpg/1200px-Papeda%2C_Kuah_Kuning%2C_Ikan_Tude_Bakar_2.jpg",
+    poster:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Papeda%2C_Kuah_Kuning%2C_Ikan_Tude_Bakar_2.jpg/1200px-Papeda%2C_Kuah_Kuning%2C_Ikan_Tude_Bakar_2.jpg",
   },
   {
     id: "5",
     category_id: "7",
     title: "Norohombi",
-    poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAvtHk-XCrcQLnLm7WZd0ld2Baa1PtMaGumQ&s",
+    poster:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAvtHk-XCrcQLnLm7WZd0ld2Baa1PtMaGumQ&s",
   },
   {
     id: "6",
     category_id: "1",
     title: "Gudeg",
-    poster: "https://qr.ptsuparmatbk.com/blog/wp-content/uploads/2024/07/gudeg.webp",
+    poster:
+      "https://qr.ptsuparmatbk.com/blog/wp-content/uploads/2024/07/gudeg.webp",
   },
   {
     id: "7",
     category_id: "4",
     title: "Chai Kue",
-    poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoMjDWnURcsKpV5KWPUmPFuKphVJWxNzZSxg&s",
+    poster:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoMjDWnURcsKpV5KWPUmPFuKphVJWxNzZSxg&s",
   },
   {
     id: "8",
@@ -70,7 +77,6 @@ const DATA = [
     title: "Klepon",
     poster:
       "https://asset.kompas.com/crops/cRn6DGksr-w6MFp4Vcebb-9Iij0=/32x0:1000x645/750x500/data/photo/2023/09/08/64fa7899edc0b.jpeg",
-
   },
   {
     id: "10",
@@ -99,13 +105,6 @@ const DATA = [
     title: "Coto Makassar",
     poster:
       "https://awsimages.detik.net.id/community/media/visual/2018/04/02/537cd788-471e-415f-bb38-049d69162573.jpeg?w=1200",
-  },
-  {
-    id: "14",
-    category_id: "5",
-    title: "Sop Konro",
-    poster:
-      "https://i.ytimg.com/vi/CkBZYun1S_Y/maxresdefault.jpg",
   },
   {
     id: "14",
@@ -155,22 +154,18 @@ const DATA = [
     title: "Es tambring",
     poster:
       "https://media.suara.com/pictures/653x366/2023/10/06/98185-es-tambring.jpg",
-  },
+  }
 ];
 
 export default function HomeScreen() {
-  const [kuliner, setKuliner] = useState([]);
-  
-  useEffect(() => {
-    // Menampilkan kuliner berdasarkan kategori pertama (Jawa)
-    filterKuliner("1");
-  }, []);
-
+  const [kuliner, setkuliner] = useState(DATA);
   const filterKuliner = (categoryId) => {
-    const filteredKuliner = DATA.filter((item) => item.category_id === categoryId);
-    setKuliner(filteredKuliner);
-  };
-
+    const filteredKuliner = DATA.filter(function
+      (item) {
+      return item.category_id === categoryId;
+    });
+    setkuliner(filteredKuliner);
+  }
   return (
     <SafeAreaView style={styles.safeArea}>
       <Text style={styles.title}>Indonesia Culinary</Text>
@@ -212,6 +207,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
     color: "#093F6A",
     marginBottom: 30,
+    borderRadius:20,
     backgroundColor:"#26C6DA",
   },
   categoryList: {
