@@ -1,4 +1,4 @@
-import { FlatList, Pressable, Text, StyleSheet, View } from "react-native";
+import { FlatList, Pressable, Text, StyleSheet, ScrollView } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import React, { useState, useEffect } from "react";
 import KulinerCard from "../../components/KulinerCard";
@@ -170,7 +170,7 @@ export default function HomeScreen() {
     <SafeAreaView style={styles.safeArea}>
       <Text style={styles.title}>Indonesia Culinary</Text>
 
-     
+      <ScrollView>
       <FlatList
         data={CATEGORIES}
         horizontal
@@ -187,19 +187,23 @@ export default function HomeScreen() {
      
       <FlatList
         data={kuliner}
+        horizontal={false}
         numColumns={2}
         renderItem={({ item }) => <KulinerCard item={item} />}
         keyExtractor={(item) => item.id}
+        showsVerticalScrollIndicator={true}
         contentContainerStyle={styles.kulinerList}
       />
+      </ScrollView>
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   safeArea: {
-    padding: 20,
-    margin:5,
+    flex:1,
+    padding: 5,
+    margin:10,
   },
   title: {
     fontSize: 24,
